@@ -43,7 +43,7 @@
                     <i class="fas fa-bars" id="ham"></i>
                 </div>
                 <nav class="nav-enlace">
-                    <a href="#">Home</a><span class="barra"></span>
+                    <a href="index.php">Home</a><span class="barra"></span>
                     <a href="#">Productos</a><span class="barra"></span>
                     <a href="#">Servicios</a><span class="barra"></span>
                     <a href="#">Nosotros</a><span class="barra"></span>

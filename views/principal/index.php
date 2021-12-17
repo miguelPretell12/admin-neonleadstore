@@ -1,4 +1,5 @@
-<section class="portada-container bg-black">
+<!-- 
+    <section class="portada-container bg-black">
         <div class="container container-responsive">
         <img src="/build/img/11.webp" style="width: 100%; height: 100%; object-fit:cover;">
         </div>
@@ -53,4 +54,23 @@
         </div>
         
        
-    </section>
+    </section> -->
+
+<section class="fondo">
+    <div class="container-img">
+        <img src="/build/img/11.webp" alt="imagen de portada">
+    </div>
+<section>
+<section class="david">
+    <div>
+        <article>
+            <h1>ATRÉVETE A INNOVAR</h1>
+            <P>Este 2021, Neon Led Store te ayuda a crear una nueva experiencia. Contamos con el toque ideal que necesitas para encantar a tus invitados con una produccion visual de calidad</P>
+        </article>
+        <div class="img-container">
+            <img src="/public/build/img/5.webp" alt="imagen 1">
+            <img src="" alt="imagen 2">
+            <img src="" alt="imagen 3">
+        </div>
+    </div>
+</section>
