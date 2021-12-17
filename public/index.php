@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../includes/app.php';
+require_once __DIR__.'/../include/app.php';
 
 use Controllers\AdminController;
 use Controllers\CategoriaController;
@@ -74,16 +74,22 @@ $router = new Router();
 //Cliente
 
     //RUTAS AUN NO PROTEGIDAS
-    //method get
+    //method get 
     $router->get('/cliente',[ClienteController::class,'index']);
     $router->get('/cliente/listar',[ClienteController::class,'listar']); 
-    $router->get('/cliente/getCliente',[ClienteController::class,'getCliente']); //aun no implementado
+     //aun no implementado
 
     //method post
-    $router->post('/cliente/create',[ClienteController::class,'create']); //PROBLEMAS PARA LLAMAR
-    $router->post('/cliente/estado',[CategoriaController::class,'cambiarEstado']); //aun no implementado
-    $router->post('/cliente/update',[ClienteController::class,'update']); //aun no implementado
-    $router->post('/cliente/delete',[ClienteController::class,'create']); //aun no implementado
+    $router->post('/cliente/getCliente',[ClienteController::class,'getCliente']);
+    $router->post('/cliente/create',[ClienteController::class,'create']);
+    $router->post('/cliente/estado',[ClienteController::class,'estado']); //aun no implementado
+    $router->post('/cliente/update',[ClienteController::class,'update']); 
+    $router->post('/cliente/delete',[ClienteController::class,'delete']);
+
+//configuración
+    $router->get('/configuracion',[ConfiguracionController::class,'index']);
+//graficos
+    $router->get('/graficos',[GraficosController::class,'index']);
 
 
 // Principal
