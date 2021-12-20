@@ -1,3 +1,7 @@
+<!-- Menu debe tener OVERFLOW (si se pasa más de lo permito de su altura, siga conteniendo más elementos y no afecte el diseño de la pagina
+AGREGO EL SCROLL) -->
+
+
 <?php $currentURL = explode('/', $_SERVER['PHP_SELF']); ?>
 <!-- Left Sidebar -->
 <aside id="leftsidebar" class="sidebar">
@@ -60,24 +64,24 @@
                 </a>
             </li>
             <li class="<?= end($currentURL) == 'productoColor' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/productoColor">
+                <a href="/productoColor">
                 <i class="fas fa-fill-drip iconos "></i>
                     <span>Producto x Color</span>
                 </a>
             </li>
-            <li class="<?= end($currentURL) == 'graficos' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/graficos">
-                <i class="fas fa-border-all iconos "></i>
-                    <span>Graficos</span>
-                </a>
-            </li>
             <li class="<?= end($currentURL) == 'configuracion' ? 'active' : 'inactive' ?>">
-                <a style= "text-decoration:none" href="/configuracion">
+                <a style= "text-decoration:none" href="/configuracion ">
                 <i class="fas fa-cog iconos "></i>
                     <span>configuracion</span>
                 </a>
             </li>
 
+            <li class="<?= end($currentURL) == 'cerrar' ? 'active' : 'inactive' ?>">
+                <a style= "text-decoration:none" href="/cerrar">
+                <i class="fas fa-times-circle iconos"></i>
+                    <span>Cerrar Session</span>
+                </a>
+            </li>
             
         </ul>
     </div>

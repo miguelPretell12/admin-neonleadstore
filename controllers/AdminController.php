@@ -1,7 +1,6 @@
 <?php 
 namespace Controllers;
 
-use Model\Color;
 use Model\Users;
 use MVC\Router;
 
@@ -56,5 +55,51 @@ class AdminController  {
         $id = $_SESSION['id'];
         $router->render("dashboard/index",["id"=>$id]);
     }
+
+    public static function indexConfig(Router $router){
+        $router->render("dashboard/configuracion",[]);
+    }
+
+    public static function dataConfig(){
+        $data = Users::find($_SESSION['id']);
+        echo json_encode([
+            'data'=>$data
+        ]);
+    }
+
+    // verifica 
+    public static function verificar(){
+        echo  json_encode([
+            'res' => Users::verificarKey($_POST['passwordV'])
+        ]);
+    }
+
+    // Actualiza la contraseña del administrador
+    public static function updatePassword(){
+        $id = filter_var($_SESSION['id'], FILTER_VALIDATE_INT);
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $passwordHasheado = password_hash($_POST['pass'], PASSWORD_DEFAULT);
+            $post = array("pass"=>$passwordHasheado, "id"=>$id);
+            
+            $user= Users::find($id);
+            $user->sincronizar($post);
+
+            $resultado = $user->actualizar();
+
+            echo json_encode(['res'=>$resultado]);
+        }
+        
+    }
     
+    // Cerrar session
+    public static function cerrar(){
+        session_destroy();
+        header("location: /login");
+    }
+
+    public static function grafico(){
+        
+    }
+
 }
