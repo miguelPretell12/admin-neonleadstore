@@ -49,7 +49,8 @@
                     <div id="respuesta" class="m-1 d-none">
                         <label>Contraseña nueva:</label>
                         <input type="password" class="form-control" id="passnuevo1">
-
+<
+                        <p>
                         <label>Confirmar contraseña</label>
                         <input type="password" class="form-control" id="passnuevo2">
                         <div id="mensaje"></div>
